@@ -5,7 +5,8 @@
 #		The gluon-mesh-batman-adv-* package must come first because of the dependency resolution
 
 GLUON_SITE_PACKAGES := \
-	gluon-mesh-batman-adv-15 \
+#	gluon-mesh-batman-adv-15 \
+	gluon-mesh-batman-adv-14 \
 	gluon-alfred \
 	gluon-respondd \
 	gluon-autoupdater \
@@ -42,7 +43,7 @@ GLUON_SITE_PACKAGES := \
 #			opkg compare-versions "$1" '>>' "$2"
 #		to decide if a version is newer or not.
 
-DEFAULT_GLUON_RELEASE := 16.1.3-tunneldigger-$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := 16.1.4-tunneldigger-$(shell date '+%Y%m%d')
 
 ##	GLUON_RELEASE
 #		call make with custom GLUON_RELEASE flag, to use your own release version scheme.
