@@ -14,6 +14,11 @@ make update
 make clean GLUON_TARGET=ar71xx-generic
 make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental BROKEN=1
 ```
+If the build still fails after some retries,
+slow down and simplify:
+```
+make V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
+```
 
 ## Misc
 Prevent shitty #clownflare from stopping your build due to broken downloads:
