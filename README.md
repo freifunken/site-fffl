@@ -8,7 +8,7 @@ pacman -S base-devel
 ```sh
 git clone https://github.com/freifunk-gluon/gluon.git gluon -b v2016.1.x
 cd gluon
-git clone https://github.com/freifunken/site-fffl.git site -b v2016.1.x
+git clone https://github.com/freifunken/site-fffl.git site -b l2tp-v2016.1.x
 ```
 
 ```sh
@@ -20,7 +20,7 @@ make update
 make clean GLUON_TARGET=ar71xx-generic
 make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental BROKEN=1
 ```
-If the build still fails after some retries,
+If the build fails, even after some retries,
 slow down and simplify the task:
 ```sh
 make V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
