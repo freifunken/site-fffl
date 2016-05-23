@@ -1,10 +1,23 @@
 ## Dependencies
 Arch Linux/Manjaro
 ```sh
-pacman -S base-devel
+# rank mirrors by speed and filter the out of date ones
+sudo pacman-mirrors -g
+# synchronize repo databases and update your system
+sudo pacman -Syyu
+# install package group for development purposes
+sudo pacman -S base-devel
 ```
 
 ## Building the images
+```sh
+# Arch Linux/Manjaro
+sudo pacman -Syyu
+
+# Debian
+sudo aptitude full-upgrade
+```
+
 ```sh
 git clone https://github.com/freifunk-gluon/gluon.git gluon -b v2016.1.x
 cd gluon
