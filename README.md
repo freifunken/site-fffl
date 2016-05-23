@@ -62,6 +62,7 @@ git clone https://github.com/freifunken/site-fffl.git site -b l2tp-v2016.1.x
 Depending on your GPG truststore this might or might not get any usable results.
 ```sh
 git log --show-signature -1
+(cd site && git log --show-signature -1)
 ```
 
 ### List available targets
