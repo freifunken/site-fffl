@@ -9,7 +9,7 @@ sudo pacman -Syyu
 sudo pacman -S base-devel
 ```
 
-## Improve trust in source's integrity
+## Enhance trust in source's integrity
 
 There are, as always, several grades of verification and you should decide,
 depending on your attacker model, which you want and/or need,
