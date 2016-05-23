@@ -12,14 +12,17 @@ sudo pacman -S base-devel
 ## Secure environment
 
 ### [`.gitconfig`](https://github.com/git/git/blob/master/Documentation/config.txt)
+Git is capable of making sure every object received during a fetch still matches its SHA-1 checksum and points to valid objects. It might **slow down** the operation, especially on large repositories!
 ```sh
 git config --null --get transfer.fsckobjects
 git config --null --get fetch.fsckobjects
-git config --null --get receive.fsckobjects
+# For server side of Git:
+# git config --null --get receive.fsckobjects
 # If the previous output is false or null, set it to true
 git config --global transfer.fsckobjects true
 git config --global fetch.fsckobjects true
-git config --global receive.fsckobjects true
+# For server side of Git:
+# git config --global receive.fsckobjects true
 ```
 
 ## Building the images
