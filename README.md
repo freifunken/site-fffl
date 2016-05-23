@@ -23,6 +23,7 @@ make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental BROKEN
 If the build fails, even after some retries,
 slow down and simplify the task:
 ```sh
+make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 make V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 ```
 
