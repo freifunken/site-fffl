@@ -11,6 +11,11 @@ sudo pacman -S base-devel
 
 ## Improve trust in source's integrity
 
+There are, as always, several grades of verification and you should decide,
+depending on your attacker model, which you want and/or need,
+and therefore ensure you will not be victim to a MITM-Attack.<br>
+Unfortunately, bootstrapping trust can be quite tricky.
+
 ### [`.gitconfig`](https://github.com/git/git/blob/master/Documentation/config.txt)
 Git is capable of making sure every object received during a transfer still matches its SHA-1 checksum and points to valid objects. It might **slow down** the operation, especially on large repositories!
 ```sh
@@ -26,11 +31,9 @@ git config --global fetch.fsckobjects true
 ```
 
 ### GPG Keys
-There are, as always, several grades of verification and you should decide,
-depending on your attacker model, which you want and/or need.
-Unfortunately, bootstrapping trust can be quite tricky.
+
 Don't put too much confidence in unverified public keys (Ask for fingerpint face to face)
-[](http://www.heise.de/ct/ausgabe/2015-6-Gefaelschte-PGP-Keys-im-Umlauf-2549724.html)
+* [Gefälschte PGP-Keys im Umlauf](http://www.heise.de/ct/ausgabe/2015-6-Gefaelschte-PGP-Keys-im-Umlauf-2549724.html)
 ```sh
 git --version # >v1.7.9
 gpg2 --search-key mschiffer@universe-factory.net
@@ -39,7 +42,7 @@ gpg2 --search-key freifunk@schloss.stras.se
 
 ## Building the images
 
-### Update system
+### Update build-system
 ```sh
 # Arch Linux/Manjaro
 sudo pacman -Syyu
