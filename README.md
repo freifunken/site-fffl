@@ -12,7 +12,7 @@ sudo pacman -S base-devel
 ## Secure environment
 
 ### [`.gitconfig`](https://github.com/git/git/blob/master/Documentation/config.txt)
-Git is capable of making sure every object received during a fetch still matches its SHA-1 checksum and points to valid objects. It might **slow down** the operation, especially on large repositories!
+Git is capable of making sure every object received during a transfer still matches its SHA-1 checksum and points to valid objects. It might **slow down** the operation, especially on large repositories!
 ```sh
 git config --null --get transfer.fsckobjects
 git config --null --get fetch.fsckobjects
