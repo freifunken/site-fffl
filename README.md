@@ -9,6 +9,19 @@ sudo pacman -Syyu
 sudo pacman -S base-devel
 ```
 
+## Secure environment
+
+### [`.gitconfig`](https://github.com/git/git/blob/master/Documentation/config.txt)
+```sh
+git config --null --get transfer.fsckobjects
+git config --null --get fetch.fsckobjects
+git config --null --get receive.fsckobjects
+# If the previous output is false or null, set it to true
+git config --global transfer.fsckobjects true
+git config --global fetch.fsckobjects true
+git config --global receive.fsckobjects true
+```
+
 ## Building the images
 ```sh
 # Arch Linux/Manjaro
