@@ -35,7 +35,7 @@ git config --global fetch.fsckobjects true
 Don't put too much confidence in unverified public keys (Ask for fingerpint face to face)
 * [Gefälschte PGP-Keys im Umlauf](http://www.heise.de/ct/ausgabe/2015-6-Gefaelschte-PGP-Keys-im-Umlauf-2549724.html)
 ```sh
-git --version # >v1.7.9
+git --version # >=v1.7.9
 gpg2 --search-key mschiffer@universe-factory.net
 gpg2 --search-key freifunk@schloss.stras.se
 ```
