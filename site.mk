@@ -17,7 +17,6 @@ GLUON_SITE_PACKAGES := \
 	gluon-config-mode-tunneldigger \
 	gluon-ebtables-filter-multicast \
 	gluon-ebtables-filter-ra-dhcp \
-	gluon-ebtables-filter-roguenets \
 	gluon-luci-admin \
 	gluon-luci-autoupdater \
 	gluon-luci-portconfig \
@@ -43,7 +42,7 @@ GLUON_SITE_PACKAGES := \
 #		to decide if a version is newer or not.
 
 #DEFAULT_GLUON_RELEASE := 0.6+exp$(shell date '+%Y%m%d')
-DEFAULT_GLUON_RELEASE := exp-2016.1.x-cebb753-l2tp-37618c0
+DEFAULT_GLUON_RELEASE := exp-2016.1.x-3f472cb-l2tp-510012d-0
 
 ##	GLUON_RELEASE
 #		call make with custom GLUON_RELEASE flag, to use your own release version scheme.
