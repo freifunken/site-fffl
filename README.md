@@ -26,9 +26,15 @@ git config --global fetch.fsckobjects true
 ```
 
 ### GPG Keys
+There are, as always, several grades of verification and you should decide,
+depending on your attacker model, which you want and/or need.
+Unfortunately, bootstrapping trust can be quite tricky.
+Don't put too much confidence in unverified public keys (Ask for fingerpint face to face)
+[](http://www.heise.de/ct/ausgabe/2015-6-Gefaelschte-PGP-Keys-im-Umlauf-2549724.html)
 ```sh
 git --version # >v1.7.9
 gpg2 --search-key mschiffer@universe-factory.net
+gpg2 --search-key freifunk@schloss.stras.se
 ```
 
 ## Building the images
@@ -50,6 +56,7 @@ git clone https://github.com/freifunken/site-fffl.git site -b l2tp-v2016.1.x
 ```
 
 ### [Verify signature](https://git-scm.com/book/tr/v2/Git-Tools-Signing-Your-Work) of checked out commit
+Depending on your GPG truststore this might or might not get any usable results.
 ```sh
 git log --show-signature -1
 ```
