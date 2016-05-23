@@ -27,7 +27,7 @@ git config --global fetch.fsckobjects true
 
 ### GPG Keys
 ```sh
-git --version #> v1.7.9
+git --version # >v1.7.9
 gpg2 --search-key mschiffer@universe-factory.net
 ```
 
