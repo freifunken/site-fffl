@@ -25,7 +25,15 @@ git config --global fetch.fsckobjects true
 # git config --global receive.fsckobjects true
 ```
 
+### GPG Keys
+```sh
+git --version #> v1.7.9
+gpg2 --search-key mschiffer@universe-factory.net
+```
+
 ## Building the images
+
+### Update system
 ```sh
 # Arch Linux/Manjaro
 sudo pacman -Syyu
@@ -34,16 +42,24 @@ sudo pacman -Syyu
 sudo aptitude full-upgrade
 ```
 
+### Clone repositories
 ```sh
 git clone https://github.com/freifunk-gluon/gluon.git gluon -b v2016.1.x
 cd gluon
 git clone https://github.com/freifunken/site-fffl.git site -b l2tp-v2016.1.x
 ```
 
+### [Verify signature](https://git-scm.com/book/tr/v2/Git-Tools-Signing-Your-Work) of checked out commit
+```sh
+git log --show-signature -1
+```
+
+### List available targets
 ```sh
 make GLUON_TARGET=?
 ```
 
+### Start build
 ```sh
 make update
 make clean GLUON_TARGET=ar71xx-generic
