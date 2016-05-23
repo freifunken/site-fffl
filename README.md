@@ -9,7 +9,7 @@ sudo pacman -Syyu
 sudo pacman -S base-devel
 ```
 
-## Enhance trust in source's integrity
+## Enhancing trust in source's integrity
 
 There are, as always, several grades of verification and you should decide,
 depending on your attacker model, which you want and/or need,
@@ -42,7 +42,7 @@ gpg2 --search-key freifunk@schloss.stras.se
 
 ## Building the images
 
-### Update build-system
+### Updating build-system
 ```sh
 # Arch Linux/Manjaro
 sudo pacman -Syyu
@@ -51,26 +51,26 @@ sudo pacman -Syyu
 sudo aptitude full-upgrade
 ```
 
-### Clone repositories
+### Cloning repositories
 ```sh
 git clone https://github.com/freifunk-gluon/gluon.git gluon -b v2016.1.x
 cd gluon
 git clone https://github.com/freifunken/site-fffl.git site -b l2tp-v2016.1.x
 ```
 
-### [Verify signature](https://git-scm.com/book/tr/v2/Git-Tools-Signing-Your-Work) of checked out commit
+### [Verifying signature](https://git-scm.com/book/tr/v2/Git-Tools-Signing-Your-Work) of checked out commit
 Depending on your GPG truststore this might or might not get any usable results.
 ```sh
 git log --show-signature -1
 (cd site && git log --show-signature -1)
 ```
 
-### List available targets
+### Listing available targets
 ```sh
 make GLUON_TARGET=?
 ```
 
-### Start build
+### Starting the build process
 ```sh
 make update
 make clean GLUON_TARGET=ar71xx-generic
