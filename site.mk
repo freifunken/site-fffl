@@ -8,6 +8,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-mesh-batman-adv-14 \
 	gluon-alfred \
 	gluon-respondd \
+	gluon-neighbour-info \
 	gluon-autoupdater \
 	gluon-config-mode-autoupdater \
 	gluon-config-mode-contact-info \
@@ -42,7 +43,7 @@ GLUON_SITE_PACKAGES := \
 #		to decide if a version is newer or not.
 
 #DEFAULT_GLUON_RELEASE := 0.6+exp$(shell date '+%Y%m%d')
-DEFAULT_GLUON_RELEASE := exp-2016.1.x-27e87da-l2tp-510012d-0
+DEFAULT_GLUON_RELEASE := exp-2016.1.x-14ccbd2-l2tp-510012d-0
 
 ##	GLUON_RELEASE
 #		call make with custom GLUON_RELEASE flag, to use your own release version scheme.
