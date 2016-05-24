@@ -6,7 +6,7 @@ sudo pacman-mirrors -g
 # synchronize repo databases and update your system
 sudo pacman -Syyu
 # install package group for development purposes
-sudo pacman -S base-devel
+sudo pacman -S base-devel gcc49
 ```
 
 ## Enhancing trust in source's integrity
@@ -84,6 +84,10 @@ make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 ```
 ```sh
 make V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
+```
+Or try legacy GNU Compiler Collection temporarily
+```sh
+make -j$(nproc) V=s CC=gcc-4.9 GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 ```
 
 ## Misc
