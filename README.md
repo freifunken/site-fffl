@@ -53,7 +53,7 @@ sudo aptitude full-upgrade
 
 ### Cloning repositories
 ```sh
-git clone https://github.com/freifunk-gluon/gluon.git gluon -b v2016.1.x
+git clone https://github.com/freifunk-gluon/gluon.git gluon -b v2016.1.4
 cd gluon
 git clone https://github.com/freifunken/site-fffl.git site -b l2tp-v2016.1.x
 ```
@@ -61,6 +61,7 @@ git clone https://github.com/freifunken/site-fffl.git site -b l2tp-v2016.1.x
 ### [Verifying signature](https://git-scm.com/book/tr/v2/Git-Tools-Signing-Your-Work) of checked out commit
 Depending on your GPG truststore this might or might not get any usable results.
 ```sh
+git tag -v v2016.1.4
 git log --show-signature -1
 (cd site && git log --show-signature -1)
 ```
