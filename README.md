@@ -108,8 +108,7 @@ make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 ```
 ##### CloudFlare
 Prevent shitty #clownflare from stopping your build due to broken downloads:
-* https://github.com/apenwarr/sshuttle
-  * https://blog.marco-ilgner.de/article/vpn-im-uberspace (**Outdated!**)
+
 ```sh
 sudo pacman -Syyu
 sudo pacman -S python python-pip
@@ -135,3 +134,4 @@ shuttle
 
 ## Resources
 * http://gluon.readthedocs.io/en/latest/user/getting_started.html
+* https://github.com/apenwarr/sshuttle
