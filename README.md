@@ -68,6 +68,7 @@ git log --show-signature -1
 
 ### Listing available targets
 ```sh
+make update
 make GLUON_TARGET=?
 ```
 
