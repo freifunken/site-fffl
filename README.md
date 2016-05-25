@@ -87,8 +87,21 @@ make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 make V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 ```
 Or try legacy GNU Compiler Collection temporarily
+
+~~`make -j$(nproc) V=s CC=gcc-4.9 GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental`~~
+
 ```sh
-make -j$(nproc) V=s CC=gcc-4.9 GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
+mkdir -p $HOME/bin
+ln -s /usr/bin/c++-4.9.3 $HOME/bin/c++
+ln -s /usr/bin/cpp-4.9.3 $HOME/bin/cpp
+ln -s /usr/bin/g++-4.9.3 $HOME/bin/g++
+ln -s /usr/bin/gcc-4.9.3 $HOME/bin/gcc
+ln -s /usr/bin/gcc-4.9.3 $HOME/bin/cc
+```
+
+```sh
+PATH=$HOME/bin:$PATH
+make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 ```
 
 ## Misc
