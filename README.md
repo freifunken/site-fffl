@@ -127,12 +127,12 @@ Host sshuttle
 ```
 **`alias` in `.bashrc`**
 ```sh
-echo "alias shuttle='sshuttle --dns -v -r sshuttle 0/0'" >> ~/.bashrc
+echo "alias clownflare='sshuttle --dns -v -r sshuttle 0/0'" >> ~/.bashrc
 source ~/.bashrc
 ```
 Forward all traffic (even DNS queries are being proxied)
 ```sh
-shuttle
+clownflare
 ```
 
 ## Resources
