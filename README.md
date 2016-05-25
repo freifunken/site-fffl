@@ -78,16 +78,19 @@ make update
 make clean GLUON_TARGET=ar71xx-generic
 make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental BROKEN=1
 ```
-If the build fails, even after some retries,
-slow down and simplify the task:
+
+#### Failure
+If the build fails, even after some retries, ...
+
+##### Simplifying
 ```sh
 make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 ```
 ```sh
 make V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 ```
-Or try legacy GNU Compiler Collection temporarily
 
+##### Legacy GNU Compiler Collection
 ~~`make -j$(nproc) V=s CC=gcc-4.9 GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental`~~
 
 ```sh
@@ -98,16 +101,37 @@ ln -s /usr/bin/g++-4.9.3 $HOME/bin/g++
 ln -s /usr/bin/gcc-4.9.3 $HOME/bin/gcc
 ln -s /usr/bin/gcc-4.9.3 $HOME/bin/cc
 ```
-
+Temporarily
 ```sh
 PATH=$HOME/bin:$PATH
 make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 ```
-
-## Misc
+##### CloudFlare
 Prevent shitty #clownflare from stopping your build due to broken downloads:
 * https://github.com/apenwarr/sshuttle
   * https://blog.marco-ilgner.de/article/vpn-im-uberspace (**Outdated!**)
+```sh
+sudo pacman -Syyu
+sudo pacman -S python python-pip
+pip install sshuttle
+```
+**`.ssh/config`**
+```
+Host sshuttle
+    HostName SERVER.uberspace.de
+    User USER
+    IdentityFile $HOME/.ssh/SSHKEYFILE
+    IdentitiesOnly yes
+```
+**`alias` in `.bashrc`**
+```sh
+echo "alias shuttle='sshuttle --dns -v -r sshuttle 0/0'" >> ~/.bashrc
+source ~/.bashrc
+```
+Forward all traffic (even DNS queries are being proxied)
+```sh
+shuttle
+```
 
 ## Resources
 * http://gluon.readthedocs.io/en/latest/user/getting_started.html
