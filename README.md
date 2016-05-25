@@ -56,7 +56,7 @@ sudo aptitude full-upgrade
 ```sh
 git clone https://github.com/freifunk-gluon/gluon.git gluon -b v2016.1.4
 cd gluon
-git clone https://github.com/freifunken/site-fffl.git site -b l2tp-v2016.1.x
+git clone https://github.com/freifunk-flensburg/site-fffl.git site -b l2tp-v2016.1.x
 ```
 
 ### [Verifying signature](https://git-scm.com/book/tr/v2/Git-Tools-Signing-Your-Work) of checked out commit
