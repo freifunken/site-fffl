@@ -143,7 +143,7 @@ clownflare
 ## Notes
 This is branch is totally disconnected from the other non-l2tp histories
 ```sh
-# https://git-scm.com/docs/git-checkout/
+# https://www.kernel.org/pub/software/scm/git/docs/git-checkout.html
 git checkout --orphan l2tp-v2016.1.x HEAD
 # clear the index and the working tree
 git rm -rf .
