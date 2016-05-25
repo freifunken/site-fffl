@@ -72,7 +72,7 @@ make update
 make GLUON_TARGET=?
 ```
 
-### Starting the build process
+### (Re-)Starting the build process
 ```sh
 make update
 make clean GLUON_TARGET=ar71xx-generic
