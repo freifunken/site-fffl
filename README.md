@@ -23,6 +23,7 @@ git config --null --get transfer.fsckobjects
 git config --null --get fetch.fsckobjects
 # For server side of Git:
 # git config --null --get receive.fsckobjects
+
 # If the previous output is false or null, set it to true
 git config --global transfer.fsckobjects true
 git config --global fetch.fsckobjects true
