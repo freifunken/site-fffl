@@ -109,8 +109,8 @@ PATH=$HOME/bin:$PATH
 make dirclean
 make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 ```
-##### CloudFlare
-Prevent shitty #clownflare from stopping your build due to broken downloads:
+##### `$ sshuttle`
+Prevent shitty #clownflare from stopping your build due to **broken downloads**:
 
 ```sh
 sudo pacman -Syyu
