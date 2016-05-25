@@ -139,3 +139,12 @@ clownflare
 ## Resources
 * http://gluon.readthedocs.io/en/latest/user/getting_started.html
 * https://github.com/apenwarr/sshuttle
+
+## Notes
+This is branch is totally disconnected from the other non-l2tp histories
+```sh
+# https://git-scm.com/docs/git-checkout/
+git checkout --orphan <new_branch>
+# clear the index and the working tree
+git rm -rf **/*
+```
