@@ -104,6 +104,9 @@ ln -s /usr/bin/gcc-4.9.3 $HOME/bin/cc
 Temporarily
 ```sh
 PATH=$HOME/bin:$PATH
+# clean the entire tree,
+# so the toolchain will be rebuilt as well
+make dirclean
 make -j$(nproc) V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental
 ```
 ##### CloudFlare
