@@ -43,6 +43,9 @@ GLUON_SITE_PACKAGES := \
 #		to decide if a version is newer or not.
 
 #DEFAULT_GLUON_RELEASE := 0.6+exp$(shell date '+%Y%m%d')
+# [AUTOUPDATER_BRANCH]-[GLUON_BRANCH]-[GLUON_COMMIT]-[MESH-VPN]-[PACKAGES_COMMIT]-[COUNTER]
+# [GLUON_COMMIT] = https://github.com/freifunk-gluon/gluon/commits/v2016.1.x
+# [PACKAGES_COMMIT] = https://github.com/ffrl/ffrl-packages/commits/Branch_v2016.1.x
 DEFAULT_GLUON_RELEASE := exp-2016.1.x-14ccbd2-l2tp-510012d-0
 
 ##	GLUON_RELEASE
